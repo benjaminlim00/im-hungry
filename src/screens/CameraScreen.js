@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import ImageSelect from '../components/ImageSelect';
-import {Button} from 'react-native-elements';
-import {RNCamera} from 'react-native-camera';
+import { Button } from 'react-native-elements';
+import { RNCamera } from 'react-native-camera';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const CameraScreen = () => {
   const [photo, setPhoto] = useState(null);
 
   const _takePicture = async () => {
     if (this.camera) {
-      const options = {quality: 0.5, base64: true};
+      const options = { quality: 0.5, base64: true };
       const data = await this.camera.takePictureAsync(options);
       console.warn('photo taken: ' + data.uri);
     }
@@ -37,15 +38,11 @@ const CameraScreen = () => {
           buttonNegative: 'Cancel',
         }}
       />
-      <View style={styles.view}>
-        <Button
-          titleStyle={{color: '#2bbd7e'}}
-          buttonStyle={styles.button}
-          title="Capture"
-          onPress={_takePicture}
-          type="clear"
-        />
+      <TouchableOpacity style={styles.captureButton} onPress={_takePicture}>
+        <Icon name='camera' size={30} color='black' />
+      </TouchableOpacity>
 
+      <View style={styles.imagePickerView}>
         <ImageSelect onPress={setPhoto} getPhoto={photo} />
       </View>
     </View>
@@ -71,20 +68,22 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
   },
 
-  button: {
-    borderColor: '#2bbd7e',
-    borderWidth: 1,
-    borderRadius: 6,
-    padding: 5,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 15,
-  },
-  view: {
-    padding: 20,
+  imagePickerView: {
+    padding: 13,
     flexDirection: 'column',
-    // justifyContent: 'space-evenly',
     backgroundColor: '#f9f9f9',
+  },
+  captureButton: {
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.2)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 70,
+    height: 70,
+    backgroundColor: '#fff',
+    borderRadius: 50,
+    marginBottom: 5,
+    alignSelf: 'center',
   },
 });
 

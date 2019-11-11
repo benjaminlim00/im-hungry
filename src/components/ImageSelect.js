@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import {Button} from 'react-native-elements';
+import { StyleSheet } from 'react-native';
+import { Button } from 'react-native-elements';
 import ImagePicker from 'react-native-image-picker';
 
-const ImageSelect = ({onPress, getPhoto}) => {
+const ImageSelect = ({ onPress, getPhoto }) => {
   const _handleChoosePhoto = () => {
     const options = {
       noData: true,
@@ -18,11 +18,11 @@ const ImageSelect = ({onPress, getPhoto}) => {
   return (
     <>
       <Button
-        titleStyle={{color: '#2bbd7e'}}
+        titleStyle={{ color: '#2bbd7e' }}
         buttonStyle={styles.button}
-        title="Upload an image"
+        title='Upload an image'
         onPress={_handleChoosePhoto}
-        type="clear"
+        type='clear'
       />
       {getPhoto ? console.warn('photo uploaded') : null}
     </>

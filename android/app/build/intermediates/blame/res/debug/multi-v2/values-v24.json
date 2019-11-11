@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/benjamin/Desktop/imHungry/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/home/benjamin/Desktop/Im-Hungry/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/root/.gradle/caches/transforms-2/files-2.1/bc633f05409553b3ea2ac2f491f9d8cf/res/values-v24/values-v24.xml",

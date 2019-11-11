@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/benjamin/Desktop/imHungry/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "/home/benjamin/Desktop/Im-Hungry/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
                     "source": "/root/.gradle/caches/transforms-2/files-2.1/ff465df4ea4ebb58c52e4873d33c4123/res/values-pt-rPT/values.xml",

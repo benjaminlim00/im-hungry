@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
-MERGED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
-MERGED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
-MERGED from [:react-native-vector-icons] /home/benjamin/Desktop/imHungry/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-gesture-handler] /home/benjamin/Desktop/imHungry/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/4227f5f5e393055715e24b8ed742a178/AndroidManifest.xml:2:1-13:12
-MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/68b517e45e3fd69dfa8a60315673a99e/AndroidManifest.xml:2:1-11:12
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
+MERGED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:react-native-vector-icons] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/ebad10dc42bce564f65dbe82fefd64cc/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/66b5b816713bc22c8dc68b7a1e69dd35/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] /root/.gradle/caches/transforms-2/files-2.1/23cdebcf18931f3db42641904eb81b46/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /root/.gradle/caches/transforms-2/files-2.1/c2ccaeb80e86514b8a6aef40f68356e6/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /root/.gradle/caches/transforms-2/files-2.1/bc816d32c364ca1772d4256419cc7383/AndroidManifest.xml:17:1-22:12
@@ -57,66 +57,66 @@ MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /root/.gradle/cach
 MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /root/.gradle/caches/transforms-2/files-2.1/c28b52d38c1af0f179ad60a9cbabe7e3/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.6.0] /root/.gradle/caches/transforms-2/files-2.1/710dc9ac5d03859489d034fe92f42eff/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /root/.gradle/caches/transforms-2/files-2.1/6f7c689ee5036a817ded60d9d7ce7085/AndroidManifest.xml:2:1-9:12
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:2:1-13:12
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:2:1-13:12
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:2:1-13:12
 	package
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:2:3-25
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:2:3-25
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:2:3-25
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:2:3-25
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:3:5-51
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:4:5-67
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:4:5-67
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:6:5-70
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:6:5-70
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:6:5-70
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:6:5-70
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:6:5-70
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:6:5-70
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:6:22-68
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:6:22-68
 uses-permission#android.permission.CAMERA
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:7:5-65
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:7:5-65
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:7:5-65
-MERGED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:9:5-65
-MERGED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:9:5-65
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:7:5-65
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:7:5-65
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:7:5-65
+MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:9:5-65
+MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:9:5-65
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:7:22-62
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:7:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:8:5-80
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:8:5-80
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:8:5-80
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:8:5-80
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:8:5-80
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:8:5-80
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:8:22-77
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:8:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:9:5-81
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:9:5-81
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:9:5-81
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:9:5-81
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:9:5-81
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:9:22-78
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:9:22-78
 application
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:10:5-28:19
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:10:5-28:19
-MERGED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:10:5-28:19
-MERGED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
-MERGED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
-MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/4227f5f5e393055715e24b8ed742a178/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/4227f5f5e393055715e24b8ed742a178/AndroidManifest.xml:11:5-20
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:10:5-28:19
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:10:5-28:19
+MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:10:5-28:19
+MERGED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/ebad10dc42bce564f65dbe82fefd64cc/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/ebad10dc42bce564f65dbe82fefd64cc/AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] /root/.gradle/caches/transforms-2/files-2.1/23cdebcf18931f3db42641904eb81b46/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] /root/.gradle/caches/transforms-2/files-2.1/23cdebcf18931f3db42641904eb81b46/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /root/.gradle/caches/transforms-2/files-2.1/08f82f0d86f9c5307ae59bbf1d7aff02/AndroidManifest.xml:7:5-20
@@ -140,69 +140,69 @@ MERGED from [com.facebook.soloader:soloader:0.6.0] /root/.gradle/caches/transfor
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] /root/.gradle/caches/transforms-2/files-2.1/3a4f4ceedacad6a743c6670a80f835f8/AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:12:7-39
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:12:7-39
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:12:7-39
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:12:7-39
 	tools:ignore
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:12:75-114
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:12:75-114
 	android:roundIcon
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:14:7-46
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:14:7-46
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:14:7-46
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:14:7-46
 	tools:targetApi
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:12:54-74
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:12:54-74
 	android:icon
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:13:7-41
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:13:7-41
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:13:7-41
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:13:7-41
 	android:allowBackup
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:15:7-34
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:15:7-34
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:15:7-34
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:15:7-34
 	android:theme
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:16:7-38
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:16:7-38
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:16:7-38
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:16:7-38
 	android:usesCleartextTraffic
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:12:18-53
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:12:18-53
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:11:7-38
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:11:7-38
 activity#com.imhungry.MainActivity
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:17:7-26:18
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:17:7-26:18
 	android:label
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:19:9-41
 	android:windowSoftInputMode
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:21:9-51
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:21:9-51
 	android:configChanges
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:20:9-79
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:20:9-79
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:18:9-37
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:18:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:22:9-25:25
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:22:9-25:25
 action#android.intent.action.MAIN
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:23:13-65
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:23:13-65
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:23:21-62
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:23:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:24:13-73
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:24:13-73
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:24:23-70
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:24:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:27:7-84
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:27:7-84
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml:27:17-81
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:27:17-81
 uses-sdk
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml
-MERGED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-vector-icons] /home/benjamin/Desktop/imHungry/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-vector-icons] /home/benjamin/Desktop/imHungry/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-gesture-handler] /home/benjamin/Desktop/imHungry/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-gesture-handler] /home/benjamin/Desktop/imHungry/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/4227f5f5e393055715e24b8ed742a178/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/4227f5f5e393055715e24b8ed742a178/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/68b517e45e3fd69dfa8a60315673a99e/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/68b517e45e3fd69dfa8a60315673a99e/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/ebad10dc42bce564f65dbe82fefd64cc/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.4] /root/.gradle/caches/transforms-2/files-2.1/ebad10dc42bce564f65dbe82fefd64cc/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/66b5b816713bc22c8dc68b7a1e69dd35/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/66b5b816713bc22c8dc68b7a1e69dd35/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] /root/.gradle/caches/transforms-2/files-2.1/23cdebcf18931f3db42641904eb81b46/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] /root/.gradle/caches/transforms-2/files-2.1/23cdebcf18931f3db42641904eb81b46/AndroidManifest.xml:5:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /root/.gradle/caches/transforms-2/files-2.1/c2ccaeb80e86514b8a6aef40f68356e6/AndroidManifest.xml:20:5-44
@@ -295,46 +295,46 @@ MERGED from [com.facebook.soloader:soloader:0.6.0] /root/.gradle/caches/transfor
 MERGED from [com.facebook.soloader:soloader:0.6.0] /root/.gradle/caches/transforms-2/files-2.1/710dc9ac5d03859489d034fe92f42eff/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /root/.gradle/caches/transforms-2/files-2.1/6f7c689ee5036a817ded60d9d7ce7085/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /root/.gradle/caches/transforms-2/files-2.1/6f7c689ee5036a817ded60d9d7ce7085/AndroidManifest.xml:5:5-7:41
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml
-INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/main/AndroidManifest.xml
-		INJECTED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:5:5-77
+ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:5:5-77
 	android:name
-		ADDED from /home/benjamin/Desktop/imHungry/android/app/src/debug/AndroidManifest.xml:5:22-75
+		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/debug/AndroidManifest.xml:5:22-75
 uses-feature#android.hardware.camera
-ADDED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:11:5-13:36
+ADDED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:11:5-13:36
 	android:required
-		ADDED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:13:9-33
+		ADDED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:13:9-33
 	android:name
-		ADDED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:12:9-47
+		ADDED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:12:9-47
 uses-feature#android.hardware.camera.autofocus
-ADDED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:14:5-16:36
+ADDED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:14:5-16:36
 	android:required
-		ADDED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:16:9-33
+		ADDED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:16:9-33
 	android:name
-		ADDED from [:react-native-camera] /home/benjamin/Desktop/imHungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:15:9-57
+		ADDED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:15:9-57
 provider#com.imagepicker.FileProvider
-ADDED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:9-18:20
+ADDED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
-		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-47
+		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-47
 	android:authorities
-		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-60
+		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-60
 	android:exported
-		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-37
+		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-37
 	android:name
-		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-56
+		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-56
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-17:58
+ADDED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-17:58
 	android:resource
-		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-55
+		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-55
 	android:name
-		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/imHungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:17-67
+		ADDED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:17-67
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:16.0.1] /root/.gradle/caches/transforms-2/files-2.1/ff465df4ea4ebb58c52e4873d33c4123/AndroidManifest.xml:23:9-26:75
 	android:exported
