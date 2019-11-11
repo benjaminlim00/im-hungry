@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import ImageSelect from '../components/ImageSelect';
-import { Button } from 'react-native-elements';
 import { RNCamera } from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import FancyButton from '../components/FancyButton';
 
 const CameraScreen = () => {
   const [photo, setPhoto] = useState(null);
@@ -44,6 +44,7 @@ const CameraScreen = () => {
 
       <View style={styles.imagePickerView}>
         <ImageSelect onPress={setPhoto} getPhoto={photo} />
+        <FancyButton></FancyButton>
       </View>
     </View>
   );
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: '#fff',
     borderRadius: 50,
-    marginBottom: 5,
+    marginBottom: 8,
     alignSelf: 'center',
   },
 });
