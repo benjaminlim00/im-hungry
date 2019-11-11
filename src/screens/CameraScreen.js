@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import ImageSelect from '../components/ImageSelect';
 import { RNCamera } from 'react-native-camera';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import FancyButton from '../components/FancyButton';
 
 const CameraScreen = () => {
-  const [photo, setPhoto] = useState(null);
-
   const _takePicture = async () => {
     if (this.camera) {
       const options = { quality: 0.5, base64: true };
@@ -41,11 +37,6 @@ const CameraScreen = () => {
       <TouchableOpacity style={styles.captureButton} onPress={_takePicture}>
         <Icon name='camera' size={30} color='black' />
       </TouchableOpacity>
-
-      <View style={styles.imagePickerView}>
-        <ImageSelect onPress={setPhoto} getPhoto={photo} />
-        <FancyButton></FancyButton>
-      </View>
     </View>
   );
 };
@@ -65,15 +56,13 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     alignItems: 'center',
-    // borderColor: '#2bbd7e',
-    // borderWidth: 1,
   },
 
-  imagePickerView: {
-    padding: 13,
-    flexDirection: 'column',
-    backgroundColor: '#f9f9f9',
-  },
+  // imagePickerView: {
+  //   padding: 13,
+  //   flexDirection: 'column',
+  //   backgroundColor: '#f9f9f9',
+  // },
   captureButton: {
     borderWidth: 1,
     borderColor: 'rgba(0,0,0,0.2)',
@@ -83,7 +72,7 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: '#fff',
     borderRadius: 50,
-    marginBottom: 8,
+    marginBottom: 10,
     alignSelf: 'center',
   },
 });

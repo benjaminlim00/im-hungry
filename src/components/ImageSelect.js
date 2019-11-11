@@ -13,6 +13,7 @@ const ImageSelect = ({ onPress, getPhoto }) => {
         onPress(response);
       }
     });
+    type = 'clear';
   };
 
   return (
@@ -35,8 +36,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 6,
     padding: 5,
-    marginLeft: 20,
-    marginRight: 20,
+    marginLeft: 30,
+    marginRight: 30,
+    margin: 20,
   },
 });
 
