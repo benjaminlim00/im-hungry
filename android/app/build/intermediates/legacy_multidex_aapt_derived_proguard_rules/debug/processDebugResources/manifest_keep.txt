@@ -1,0 +1,4 @@
+# Referenced at /home/benjamin/Desktop/imHungry/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:25
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at /home/benjamin/Desktop/imHungry/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:25
+-keep class com.imhungry.MainApplication { <init>(); }

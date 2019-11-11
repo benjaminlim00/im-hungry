@@ -1,0 +1,4 @@
+#Mon Nov 11 17:20:30 KST 2019
+base.0=/home/benjamin/Desktop/imHungry/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
