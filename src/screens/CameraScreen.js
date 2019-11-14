@@ -14,7 +14,11 @@ const CameraScreen = ({ isFocused }) => {
     }
   };
 
-  const toReturn = isFocused ? (
+  if (isFocused) {
+    return <Spinner />;
+  }
+
+  return (
     <View style={styles.container}>
       <RNCamera
         ref={ref => {
@@ -40,11 +44,7 @@ const CameraScreen = ({ isFocused }) => {
         <Icon name='camera' size={30} color='black' />
       </TouchableOpacity>
     </View>
-  ) : (
-    <Spinner />
   );
-
-  return toReturn;
 };
 
 const styles = StyleSheet.create({
