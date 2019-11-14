@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import { withNavigationFocus } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const CameraScreen = () => {
+const CameraScreen = ({ isFocused }) => {
   const _takePicture = async () => {
     if (this.camera) {
       const options = { quality: 0.5, base64: true };
@@ -12,7 +13,7 @@ const CameraScreen = () => {
     }
   };
 
-  return (
+  const toReturn = isFocused ? (
     <View style={styles.container}>
       <RNCamera
         ref={ref => {
@@ -38,7 +39,9 @@ const CameraScreen = () => {
         <Icon name='camera' size={30} color='black' />
       </TouchableOpacity>
     </View>
-  );
+  ) : null;
+
+  return toReturn;
 };
 
 const styles = StyleSheet.create({
@@ -77,4 +80,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CameraScreen;
+export default withNavigationFocus(CameraScreen);
