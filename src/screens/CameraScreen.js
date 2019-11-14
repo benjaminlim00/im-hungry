@@ -3,47 +3,51 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import { withNavigationFocus } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Spinner from '../components/Spinner';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const CameraScreen = ({ isFocused }) => {
   const _takePicture = async () => {
     if (this.camera) {
       const options = { quality: 0.5, base64: true };
-      const data = await this.camera.takePictureAsync(options);
-      console.warn('photo taken: ' + data.uri);
+      try {
+        const data = await this.camera.takePictureAsync(options);
+        console.warn('photo taken: ' + data.uri);
+      } catch (err) {
+        console.log(err.message);
+      }
     }
   };
 
-  if (isFocused) {
-    return <Spinner />;
-  }
-
   return (
-    <View style={styles.container}>
-      <RNCamera
-        ref={ref => {
-          this.camera = ref;
-        }}
-        style={styles.cameraView}
-        type={RNCamera.Constants.Type.back}
-        flashMode={RNCamera.Constants.FlashMode.off}
-        androidCameraPermissionOptions={{
-          title: 'Permission to use camera',
-          message: 'We need your permission to use your camera',
-          buttonPositive: 'Ok',
-          buttonNegative: 'Cancel',
-        }}
-        androidRecordAudioPermissionOptions={{
-          title: 'Permission to use audio recording',
-          message: 'We need your permission to use your audio',
-          buttonPositive: 'Ok',
-          buttonNegative: 'Cancel',
-        }}
-      />
-      <TouchableOpacity style={styles.captureButton} onPress={_takePicture}>
-        <Icon name='camera' size={30} color='black' />
-      </TouchableOpacity>
-    </View>
+    <ErrorBoundary>
+      <View style={styles.container}>
+        {isFocused && (
+          <RNCamera
+            ref={ref => {
+              this.camera = ref;
+            }}
+            style={styles.cameraView}
+            type={RNCamera.Constants.Type.back}
+            flashMode={RNCamera.Constants.FlashMode.off}
+            androidCameraPermissionOptions={{
+              title: 'Permission to use camera',
+              message: 'We need your permission to use your camera',
+              buttonPositive: 'Ok',
+              buttonNegative: 'Cancel',
+            }}
+            androidRecordAudioPermissionOptions={{
+              title: 'Permission to use audio recording',
+              message: 'We need your permission to use your audio',
+              buttonPositive: 'Ok',
+              buttonNegative: 'Cancel',
+            }}
+          />
+        )}
+        <TouchableOpacity style={styles.captureButton} onPress={_takePicture}>
+          <Icon name='camera' size={30} color='black' />
+        </TouchableOpacity>
+      </View>
+    </ErrorBoundary>
   );
 };
 
