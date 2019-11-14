@@ -19,11 +19,10 @@ const ImageSelect = ({ onPress, getPhoto }) => {
   return (
     <>
       <Button
-        titleStyle={{ color: '#2bbd7e' }}
         buttonStyle={styles.button}
-        title='Upload an image'
+        title='Upload'
         onPress={_handleChoosePhoto}
-        type='clear'
+        type='outline'
       />
       {getPhoto ? console.warn('photo uploaded') : null}
     </>
@@ -32,13 +31,7 @@ const ImageSelect = ({ onPress, getPhoto }) => {
 
 const styles = StyleSheet.create({
   button: {
-    borderColor: '#2bbd7e',
-    borderWidth: 1,
-    borderRadius: 6,
-    padding: 5,
-    marginLeft: 30,
-    marginRight: 30,
-    margin: 20,
+    margin: 40,
   },
 });
 
