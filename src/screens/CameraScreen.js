@@ -3,6 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import { withNavigationFocus } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Spinner from '../components/Spinner';
 
 const CameraScreen = ({ isFocused }) => {
   const _takePicture = async () => {
@@ -39,7 +40,9 @@ const CameraScreen = ({ isFocused }) => {
         <Icon name='camera' size={30} color='black' />
       </TouchableOpacity>
     </View>
-  ) : null;
+  ) : (
+    <Spinner />
+  );
 
   return toReturn;
 };
