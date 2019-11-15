@@ -5,13 +5,24 @@ import { withNavigationFocus } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-const CameraScreen = ({ isFocused }) => {
+const CameraScreen = ({ isFocused, navigation }) => {
   const _takePicture = async () => {
+    const _retrievePrediction = picture => {
+      //call keng api here
+      return 'bibimbap';
+    };
+
     if (this.camera) {
       const options = { quality: 0.5, base64: true };
       try {
-        const data = await this.camera.takePictureAsync(options);
-        console.warn('photo taken: ' + data.uri);
+        const picture = await this.camera.takePictureAsync(options);
+        // console.warn('photo taken: ' + picture.uri);
+        const result = await _retrievePrediction(picture.uri);
+        navigation.navigate('Diary', {
+          prediction: result,
+          previous_screen: 'camera',
+          image: 'https://picsum.photos/200',
+        });
       } catch (err) {
         console.log(err.message);
       }

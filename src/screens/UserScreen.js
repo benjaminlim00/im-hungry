@@ -13,7 +13,7 @@ export default class UserScreen extends Component {
         <View style={styles.body}>
           <View style={styles.bodyContent}>
             <Text style={styles.name}>John Doe</Text>
-            <Text style={styles.info}>Korea, seoul</Text>
+            <Text style={styles.info}>Korea, Seoul</Text>
             <Text style={styles.description}>
               Hungry boy, trying to lose weight, please show me some support
             </Text>
