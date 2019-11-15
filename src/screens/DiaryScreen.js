@@ -23,7 +23,7 @@ if (!firebase.apps.length) {
 const DiaryScreen = ({ navigation }) => {
   const [prediction, setPrediction] = useState(null);
   const [image, setImage] = useState(null);
-  const [record, setRecord] = useState(null);
+  // const [record, setRecord] = useState(null);
   const [foodRecords, setFoodRecords] = useState(null);
 
   retrieveRecords = () => {

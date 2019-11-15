@@ -78,12 +78,6 @@ const styles = StyleSheet.create({
     height: '100%',
     alignItems: 'center',
   },
-
-  // imagePickerView: {
-  //   padding: 13,
-  //   flexDirection: 'column',
-  //   backgroundColor: '#f9f9f9',
-  // },
   captureButton: {
     borderWidth: 1,
     borderColor: 'rgba(0,0,0,0.2)',
