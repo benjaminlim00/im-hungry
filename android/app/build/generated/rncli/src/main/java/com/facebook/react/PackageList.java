@@ -20,6 +20,8 @@ import org.reactnative.camera.RNCameraPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-image-picker
 import com.imagepicker.ImagePickerPackage;
+// react-native-uuid-generator
+import io.github.traviskn.rnuuidgenerator.RNUUIDGeneratorPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -70,6 +72,7 @@ public class PackageList {
       new RNCameraPackage(),
       new RNGestureHandlerPackage(),
       new ImagePickerPackage(),
+      new RNUUIDGeneratorPackage(),
       new VectorIconsPackage()
     ));
   }

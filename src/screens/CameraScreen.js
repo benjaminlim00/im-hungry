@@ -3,25 +3,40 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import { withNavigationFocus } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import UUIDGenerator from 'react-native-uuid-generator';
 import ErrorBoundary from '../components/ErrorBoundary';
+
+import { db } from '../config';
+const itemsRef = db.ref('/foodRecords');
+import {
+  _retrieveNutrition,
+  _retrievePrediction,
+  _uploadImageAsync,
+} from '../api';
 
 const CameraScreen = ({ isFocused, navigation }) => {
   const _takePicture = async () => {
-    const _retrievePrediction = picture => {
-      //call keng api here
-      return 'bibimbap';
-    };
-
     if (this.camera) {
       const options = { quality: 0.5, base64: true };
       try {
-        const picture = await this.camera.takePictureAsync(options);
-        // console.warn('photo taken: ' + picture.uri);
-        const result = await _retrievePrediction(picture.uri);
+        const pictureRaw = await this.camera.takePictureAsync(options);
+        const photo = pictureRaw.uri;
+        const result = await _retrievePrediction(photo);
         navigation.navigate('Diary', {
-          prediction: result,
           previous_screen: 'camera',
-          image: 'https://picsum.photos/200',
+          // prediction: result,
+          // image: picture.uri,
+        });
+        const nutritionData = await _retrieveNutrition(result);
+        UUIDGenerator.getRandomUUID(uuid => {
+          const url = _uploadImageAsync(photo);
+          //send image to firebase
+          itemsRef.push({
+            id: uuid,
+            name: result,
+            image: url,
+            nutritionData: nutritionData,
+          });
         });
       } catch (err) {
         console.log(err.message);
@@ -68,8 +83,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-end',
     backgroundColor: '#f9f9f9',
-    // borderColor: '#2bbd7e',
-    // borderWidth: 1,
   },
 
   cameraView: {

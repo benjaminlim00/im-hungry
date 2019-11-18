@@ -41,6 +41,8 @@ target 'imHungry' do
 
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
 
+  pod 'react-native-uuid-generator', :path => '../node_modules/react-native-uuid-generator'
+
   target 'imHungryTests' do
     inherit! :search_paths
     # Pods for testing

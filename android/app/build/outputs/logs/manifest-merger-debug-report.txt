@@ -5,6 +5,7 @@ INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManif
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
 MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+MERGED from [:react-native-uuid-generator] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-uuid-generator/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
 MERGED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-vector-icons] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -191,6 +192,8 @@ uses-sdk
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-uuid-generator] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-uuid-generator/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-uuid-generator] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-uuid-generator/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
