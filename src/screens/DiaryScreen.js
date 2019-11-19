@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
-import { ListItem } from 'react-native-elements';
 import AppBar from '../components/ToolBar';
 import { Spinner } from '../components/Spinner';
+import ModalDetail from '../components/ModalDetail';
 
 import { db } from '../config';
 const itemsRef = db.ref('/foodRecords');
@@ -12,6 +12,10 @@ const DiaryScreen = ({ navigation }) => {
   // const [image, setImage] = useState(null);
   const [foodRecords, setFoodRecords] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  _renderItem = item => {
+    return <ModalDetail item={item} />;
+  };
 
   retrieveRecords = async () => {
     await itemsRef.on('value', snapshot => {
@@ -49,24 +53,15 @@ const DiaryScreen = ({ navigation }) => {
   }
 
   return (
-    <View styles={styles.container}>
+    <View style={styles.container}>
       <AppBar />
-      <FlatList
-        data={foodRecords}
-        renderItem={({ item }) => (
-          <ListItem
-            title={item.name}
-            subtitle={item.name}
-            key={item}
-            leftAvatar={{ source: { uri: item.image } }}
-            bottomDivider
-            topDivider
-            chevron
-            onPress={() => console.warn(item.name)}
-          />
-        )}
-        keyExtractor={item => item.id}
-      />
+      <View style={{ flex: 1 }}>
+        <FlatList
+          data={foodRecords}
+          renderItem={({ item }) => _renderItem(item)}
+          keyExtractor={item => item.id}
+        />
+      </View>
     </View>
   );
 };

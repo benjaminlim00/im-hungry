@@ -17,7 +17,7 @@ import {
 const CameraScreen = ({ isFocused, navigation }) => {
   const _takePicture = async () => {
     if (this.camera) {
-      const options = { quality: 0.5, base64: true };
+      const options = { quality: 0.5, base64: true, fixOrientation: true };
       try {
         const pictureRaw = await this.camera.takePictureAsync(options);
         const photo = pictureRaw.uri;
