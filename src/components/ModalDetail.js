@@ -23,11 +23,13 @@ export default class ModalDetail extends Component {
   render() {
     let item = this.props.item;
     let { Energy, Fat, Protein, Carbs, Fiber } = item.nutritionData;
+    let subtitle = `Calories: ${Energy}`;
+
     return (
       <>
         <ListItem
           title={item.name}
-          subtitle={item.name}
+          subtitle={subtitle}
           key={item}
           leftAvatar={{ source: { uri: item.image } }}
           bottomDivider

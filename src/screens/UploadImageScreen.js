@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 import { material } from 'react-native-typography';
 import { Button } from 'react-native-elements';
 import ImagePicker from 'react-native-image-picker';
 import UUIDGenerator from 'react-native-uuid-generator';
+import { Snackbar } from 'react-native-paper';
 
 import AppBar from '../components/ToolBar';
 import { db } from '../config';
@@ -15,6 +16,8 @@ import {
 } from '../api';
 
 const UploadImageScreen = ({ navigation }) => {
+  const [snackbar, setSnackbar] = useState(false);
+
   const _handleChoosePhoto = () => {
     const options = {
       noData: true,
@@ -23,6 +26,8 @@ const UploadImageScreen = ({ navigation }) => {
       const photo = response.uri;
       if (photo) {
         try {
+          //set snackbar in advance of async calls
+          setSnackbar(true);
           const result = await _retrievePrediction(photo);
           const nutritionData = await _asyncRetrieveNutrition(result);
 
@@ -88,6 +93,13 @@ const UploadImageScreen = ({ navigation }) => {
           type='outline'
         />
       </View>
+      <Snackbar
+        duration={2000}
+        visible={snackbar}
+        onDismiss={() => setSnackbar(false)}
+      >
+        Analyzing image...
+      </Snackbar>
     </View>
   );
 };
