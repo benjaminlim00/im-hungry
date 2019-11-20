@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import { withNavigationFocus } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import UUIDGenerator from 'react-native-uuid-generator';
+import { Snackbar } from 'react-native-paper';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 import { db } from '../config';
 const itemsRef = db.ref('/foodRecords');
 import {
-  _retrieveNutrition,
+  _asyncRetrieveNutrition,
   _retrievePrediction,
   _uploadImageAsync,
 } from '../api';
 
 const CameraScreen = ({ isFocused, navigation }) => {
+  const [snackbar, setSnackbar] = useState(false);
+
   const _takePicture = async () => {
     if (this.camera) {
       const options = { quality: 0.5, base64: true, fixOrientation: true };
@@ -22,24 +25,28 @@ const CameraScreen = ({ isFocused, navigation }) => {
         const pictureRaw = await this.camera.takePictureAsync(options);
         const photo = pictureRaw.uri;
         const result = await _retrievePrediction(photo);
-        navigation.navigate('Diary', {
-          previous_screen: 'camera',
-          // prediction: result,
-          // image: picture.uri,
-        });
-        const nutritionData = await _retrieveNutrition(result);
+        const nutritionData = await _asyncRetrieveNutrition(result);
         UUIDGenerator.getRandomUUID(uuid => {
           const url = _uploadImageAsync(photo);
+          // console.log('HERE ', nutritionData);
           //send image to firebase
           itemsRef.push({
             id: uuid,
             name: result,
             image: url,
-            nutritionData: nutritionData,
+            nutritionData,
           });
         });
+        setSnackbar(true);
+        setTimeout(() => {
+          navigation.navigate('Diary', {
+            previous_screen: 'camera',
+            // prediction: result,
+            // image: picture.uri,
+          });
+        }, 2000);
       } catch (err) {
-        console.log(err.message);
+        console.log('error', err);
       }
     }
   };
@@ -72,6 +79,13 @@ const CameraScreen = ({ isFocused, navigation }) => {
         <TouchableOpacity style={styles.captureButton} onPress={_takePicture}>
           <Icon name='camera' size={30} color='black' />
         </TouchableOpacity>
+        <Snackbar
+          duration={2000}
+          visible={snackbar}
+          onDismiss={() => setSnackbar(false)}
+        >
+          Analyzing image...
+        </Snackbar>
       </View>
     </ErrorBoundary>
   );
@@ -84,7 +98,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     backgroundColor: '#f9f9f9',
   },
-
   cameraView: {
     position: 'absolute',
     width: '100%',
@@ -100,7 +113,7 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: '#fff',
     borderRadius: 50,
-    marginBottom: 10,
+    marginBottom: 15,
     alignSelf: 'center',
   },
 });

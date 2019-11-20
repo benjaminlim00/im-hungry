@@ -9,7 +9,7 @@ import AppBar from '../components/ToolBar';
 import { db } from '../config';
 const itemsRef = db.ref('/foodRecords');
 import {
-  _retrieveNutrition,
+  _asyncRetrieveNutrition,
   _retrievePrediction,
   _uploadImageAsync,
 } from '../api';
@@ -24,7 +24,7 @@ const UploadImageScreen = ({ navigation }) => {
       if (photo) {
         try {
           const result = await _retrievePrediction(photo);
-          const nutritionData = await _retrieveNutrition(result);
+          const nutritionData = await _asyncRetrieveNutrition(result);
 
           UUIDGenerator.getRandomUUID(uuid => {
             const url = _uploadImageAsync(photo);
@@ -32,7 +32,7 @@ const UploadImageScreen = ({ navigation }) => {
               id: uuid,
               name: result,
               image: url,
-              nutritionData: nutritionData,
+              nutritionData,
             });
 
             navigation.navigate('Diary', {

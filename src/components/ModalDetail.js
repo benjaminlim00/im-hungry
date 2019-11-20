@@ -22,7 +22,7 @@ export default class ModalDetail extends Component {
 
   render() {
     let item = this.props.item;
-    let { Energy, Fat, Protein } = item.nutritionData;
+    let { Energy, Fat, Protein, Carbs, Fiber } = item.nutritionData;
     return (
       <>
         <ListItem
@@ -49,7 +49,7 @@ export default class ModalDetail extends Component {
             </View>
             <View
               style={{
-                marginTop: 4,
+                marginTop: -2,
                 margin: 30,
                 marginBottom: 8,
                 alignSelf: 'center',
@@ -68,6 +68,8 @@ export default class ModalDetail extends Component {
               <Text style={material.body1}>Energy: {Energy}</Text>
               <Text style={material.body1}>Fat: {Fat}</Text>
               <Text style={material.body1}>Protein: {Protein}</Text>
+              <Text style={material.body1}>Carbs: {Carbs}</Text>
+              <Text style={material.body1}>Fiber: {Fiber}</Text>
             </View>
 
             <TouchableOpacity onPress={this.toggleModal} style={styles.button}>
