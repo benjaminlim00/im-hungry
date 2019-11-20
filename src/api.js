@@ -26,13 +26,20 @@ const _asyncRetrieveNutrition = async food => {
               CHOCDF: Carbs,
               FIBTG: Fiber,
             } = nutrients;
-            resolve({
+
+            const nutritionData = {
               Energy,
               Protein,
               Fat,
               Carbs,
               Fiber,
-            });
+            };
+            for (let prop in nutritionData) {
+              if (Object.prototype.hasOwnProperty.call(nutritionData, prop)) {
+                nutritionData[prop] = nutritionData[prop].toFixed(2);
+              }
+            }
+            resolve(nutritionData);
           });
       } catch (error) {
         reject(error);

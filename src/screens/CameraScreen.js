@@ -22,6 +22,8 @@ const CameraScreen = ({ isFocused, navigation }) => {
     if (this.camera) {
       const options = { quality: 0.5, base64: true, fixOrientation: true };
       try {
+        //set snackbar in advance of async calls
+        setSnackbar(true);
         const pictureRaw = await this.camera.takePictureAsync(options);
         const photo = pictureRaw.uri;
         const result = await _retrievePrediction(photo);
@@ -37,14 +39,11 @@ const CameraScreen = ({ isFocused, navigation }) => {
             nutritionData,
           });
         });
-        setSnackbar(true);
-        setTimeout(() => {
-          navigation.navigate('Diary', {
-            previous_screen: 'camera',
-            // prediction: result,
-            // image: picture.uri,
-          });
-        }, 2000);
+        navigation.navigate('Diary', {
+          previous_screen: 'camera',
+          // prediction: result,
+          // image: picture.uri,
+        });
       } catch (err) {
         console.log('error', err);
       }
