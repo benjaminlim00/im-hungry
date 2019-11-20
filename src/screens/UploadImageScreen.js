@@ -45,7 +45,8 @@ const UploadImageScreen = ({ navigation }) => {
             });
           });
         } catch (err) {
-          console.log(err);
+          console.log('error in uploadImageScreen');
+          //handle error for invalid food item here, pop modal
         }
       }
     });

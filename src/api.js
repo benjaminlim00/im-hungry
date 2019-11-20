@@ -12,37 +12,43 @@ const _asyncRetrieveNutrition = async food => {
         const params = {
           app_id: '59af4d68',
           app_key: '3e130ae0f401bfbc403f811ee4ff2e84',
-          ingr: food,
+          ingr: 'daddwa',
         };
         axios
           .get('https://api.edamam.com/api/food-database/parser', { params })
           .then(response => {
-            const { hints } = response.data;
-            const { nutrients } = hints[0].food;
-            const {
-              ENERC_KCAL: Energy,
-              PROCNT: Protein,
-              FAT: Fat,
-              CHOCDF: Carbs,
-              FIBTG: Fiber,
-            } = nutrients;
+            if (response.data.hints[0]) {
+              const { hints } = response.data;
+              const { nutrients } = hints[0].food;
+              const {
+                ENERC_KCAL: Energy,
+                PROCNT: Protein,
+                FAT: Fat,
+                CHOCDF: Carbs,
+                FIBTG: Fiber,
+              } = nutrients;
 
-            const nutritionData = {
-              Energy,
-              Protein,
-              Fat,
-              Carbs,
-              Fiber,
-            };
-            for (let prop in nutritionData) {
-              if (Object.prototype.hasOwnProperty.call(nutritionData, prop)) {
-                nutritionData[prop] = nutritionData[prop].toFixed(2);
+              const nutritionData = {
+                Energy,
+                Protein,
+                Fat,
+                Carbs,
+                Fiber,
+              };
+              for (let prop in nutritionData) {
+                if (Object.prototype.hasOwnProperty.call(nutritionData, prop)) {
+                  nutritionData[prop] = nutritionData[prop].toFixed(2);
+                }
               }
+              resolve(nutritionData);
+            } else {
+              reject('The input string is not a valid food name');
+              return;
             }
-            resolve(nutritionData);
           });
-      } catch (error) {
-        reject(error);
+      } finally {
+        //initially catch error here, but finally is a more appropriate use
+        resolve(nutritionData);
       }
     });
   };
@@ -50,7 +56,8 @@ const _asyncRetrieveNutrition = async food => {
   try {
     return await _retrieveNutrition(food);
   } catch (error) {
-    console.log('error', error);
+    console.log('error in api.js');
+    reject(error);
   }
 };
 

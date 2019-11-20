@@ -67,11 +67,11 @@ export default class ModalDetail extends Component {
                 marginBottom: 15,
               }}
             >
-              <Text style={material.body1}>Energy: {Energy}</Text>
-              <Text style={material.body1}>Fat: {Fat}</Text>
-              <Text style={material.body1}>Protein: {Protein}</Text>
-              <Text style={material.body1}>Carbs: {Carbs}</Text>
-              <Text style={material.body1}>Fiber: {Fiber}</Text>
+              <Text style={material.body1}>Energy: {Energy} kcal</Text>
+              <Text style={material.body1}>Fat: {Fat} g</Text>
+              <Text style={material.body1}>Protein: {Protein} g</Text>
+              <Text style={material.body1}>Carbs: {Carbs} g</Text>
+              <Text style={material.body1}>Fiber: {Fiber} g</Text>
             </View>
 
             <TouchableOpacity onPress={this.toggleModal} style={styles.button}>

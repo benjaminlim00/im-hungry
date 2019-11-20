@@ -45,7 +45,8 @@ const CameraScreen = ({ isFocused, navigation }) => {
           // image: picture.uri,
         });
       } catch (err) {
-        console.log('error', err);
+        console.log('error in cameraScreen');
+        //handle error for invalid food item here, pop modal
       }
     }
   };
