@@ -8,10 +8,9 @@ import {
   Image,
 } from 'react-native';
 import { ListItem } from 'react-native-elements';
-import { material } from 'react-native-typography';
+// import { material } from 'react-native-typography';
 import { Appbar } from 'react-native-paper';
 import LightFont from './CustomFonts/LightFont';
-import BoldFont from './CustomFonts/BoldFont';
 import RegularFont from './CustomFonts/RegularFont';
 
 export default class ModalDetail extends Component {

@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import UUIDGenerator from 'react-native-uuid-generator';
 import { Snackbar } from 'react-native-paper';
 import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorModal from './ErrorModal';
 
 import { db } from '../config';
 const itemsRef = db.ref('/foodRecords');
@@ -17,6 +18,11 @@ import {
 
 const CameraScreen = ({ isFocused, navigation }) => {
   const [snackbar, setSnackbar] = useState(false);
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
 
   const _takePicture = async () => {
     if (this.camera) {
@@ -47,12 +53,14 @@ const CameraScreen = ({ isFocused, navigation }) => {
       } catch (err) {
         console.log('error in cameraScreen');
         //handle error for invalid food item here, pop modal
+        setModal(true);
       }
     }
   };
 
   return (
     <ErrorBoundary>
+      <ErrorModal isModalVisible={modal} toggleModal={toggleModal} />
       <View style={styles.container}>
         {isFocused && (
           <RNCamera

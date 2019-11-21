@@ -6,8 +6,6 @@ import ImagePicker from 'react-native-image-picker';
 import UUIDGenerator from 'react-native-uuid-generator';
 import { Snackbar } from 'react-native-paper';
 
-import LightFont from '../components/CustomFonts/LightFont';
-import RegularFont from '../components/CustomFonts/RegularFont';
 import AppBar from '../components/ToolBar';
 import { db } from '../config';
 const itemsRef = db.ref('/foodRecords');
@@ -73,7 +71,9 @@ const UploadImageScreen = ({ navigation }) => {
         }}
       >
         {/* <Text style={material.headline}>Forgot to record a meal?</Text> */}
-        <RegularFont>Forgot to record a meal?</RegularFont>
+        <Text style={{ fontFamily: 'Montserrat-Regular', fontSize: 21 }}>
+          Forgot to record a meal?
+        </Text>
       </View>
 
       <View
