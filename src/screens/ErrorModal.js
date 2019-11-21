@@ -20,7 +20,7 @@ export default class ErrorModal extends Component {
         <View style={styles.modalContainer}>
           <Image
             style={styles.image}
-            source={require('../assets/error_background2.jpg')}
+            source={require('../assets/error_background.jpg')}
           />
           <Text style={styles.regularText}>Unable to identify food</Text>
           <View style={{ marginTop: 10, marginBottom: 200 }}>
