@@ -2,7 +2,10 @@ import axios from 'axios';
 
 const _retrievePrediction = picture => {
   //call keng api here
-  return 'bibimbap';
+  const prediction = 'bibimbap';
+  const capitalizedPred =
+    prediction.charAt(0).toUpperCase() + prediction.slice(1);
+  return capitalizedPred;
 };
 
 const _asyncRetrieveNutrition = async food => {

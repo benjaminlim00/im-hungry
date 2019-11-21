@@ -10,6 +10,7 @@ import {
 import { ListItem } from 'react-native-elements';
 import { material } from 'react-native-typography';
 import { Appbar } from 'react-native-paper';
+import FancyText from '../components/FancyText';
 
 export default class ModalDetail extends Component {
   state = {
@@ -44,8 +45,15 @@ export default class ModalDetail extends Component {
         >
           <View style={styles.modalContainer}>
             <Appbar.Header>
-              <Appbar.Content title={item.name} />
+              <Appbar.Content
+                title={item.name}
+                titleStyle={{
+                  fontFamily: 'Montserrat-Regular',
+                  alignSelf: 'center',
+                }}
+              />
             </Appbar.Header>
+
             <View style={styles.card}>
               <Image style={styles.image} source={{ uri: item.image }} />
             </View>
