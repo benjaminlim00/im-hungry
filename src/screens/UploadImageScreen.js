@@ -6,6 +6,7 @@ import ImagePicker from 'react-native-image-picker';
 import UUIDGenerator from 'react-native-uuid-generator';
 import { Snackbar } from 'react-native-paper';
 
+import ErrorModal from './ErrorModal';
 import AppBar from '../components/ToolBar';
 import { db } from '../config';
 const itemsRef = db.ref('/foodRecords');
@@ -17,7 +18,11 @@ import {
 
 const UploadImageScreen = ({ navigation }) => {
   const [snackbar, setSnackbar] = useState(false);
+  const [modal, setModal] = useState(false);
 
+  const toggleModal = () => {
+    setModal(!modal);
+  };
   const _handleChoosePhoto = () => {
     const options = {
       noData: true,
@@ -47,6 +52,7 @@ const UploadImageScreen = ({ navigation }) => {
         } catch (err) {
           console.log('error in uploadImageScreen');
           //handle error for invalid food item here, pop modal
+          setModal(true);
         }
       }
     });
@@ -56,6 +62,7 @@ const UploadImageScreen = ({ navigation }) => {
     <View
       style={{ flex: 1, flexDirection: 'column', backgroundColor: '#FFFFFF' }}
     >
+      <ErrorModal isModalVisible={modal} toggleModal={toggleModal} />
       <AppBar />
       <Image
         style={{ width: 200, height: 200, alignSelf: 'center', marginTop: 70 }}
