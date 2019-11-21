@@ -33,7 +33,7 @@ export default class UserScreen extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#008b50',
+    backgroundColor: '#9ccc64',
     height: 200,
   },
   avatar: {
@@ -47,11 +47,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop: 130,
   },
-  name: {
-    fontSize: 22,
-    color: '#FFFFFF',
-    fontWeight: '600',
-  },
   body: {
     marginTop: 40,
   },
@@ -61,17 +56,19 @@ const styles = StyleSheet.create({
     padding: 30,
   },
   name: {
-    fontSize: 28,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 30,
     color: '#696969',
-    fontWeight: '600',
   },
   info: {
+    fontFamily: 'Montserrat-Regular',
     fontSize: 16,
     color: '#00BFFF',
     marginTop: 8,
   },
   description: {
-    fontSize: 16,
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 15,
     color: '#696969',
     marginTop: 20,
     textAlign: 'center',
