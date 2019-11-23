@@ -117,6 +117,8 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     color: '#fff',
     letterSpacing: 1.3,
+    paddingHorizontal: 12,
+    paddingVertical: 3,
   },
   card: {
     height: '57%',

@@ -15,6 +15,7 @@ import {
   _retrievePrediction,
   _uploadImageAsync,
 } from '../api';
+import { func } from 'prop-types';
 
 const CameraScreen = ({ isFocused, navigation }) => {
   const [snackbar, setSnackbar] = useState(false);
@@ -28,30 +29,42 @@ const CameraScreen = ({ isFocused, navigation }) => {
     if (this.camera) {
       const options = { quality: 0.5, base64: true, fixOrientation: true };
       try {
+        //disable button
         //set snackbar in advance of async calls
         setSnackbar(true);
         const pictureRaw = await this.camera.takePictureAsync(options);
         const photo = pictureRaw.uri;
-        const result = await _retrievePrediction(photo);
-        const nutritionData = await _asyncRetrieveNutrition(result);
-        UUIDGenerator.getRandomUUID(uuid => {
-          const url = _uploadImageAsync(photo);
-          // console.log('HERE ', nutritionData);
-          //send image to firebase
-          itemsRef.push({
-            id: uuid,
-            name: result,
-            image: url,
-            nutritionData,
+
+        new Promise(function(resolve, reject) {
+          let result = _retrievePrediction(photo);
+          resolve(result);
+        })
+          .then(function(result) {
+            console.log('result', result);
+            return _asyncRetrieveNutrition(result);
+          })
+          .then(function(nutritionData) {
+            console.log('nutrition data', nutritionData);
+            UUIDGenerator.getRandomUUID(uuid => {
+              const url = _uploadImageAsync(photo);
+              // console.log('HERE ', nutritionData);
+              //send image to firebase
+              itemsRef.push({
+                id: uuid,
+                name: result,
+                image: url,
+                nutritionData,
+              });
+            });
+            //remove disable button
+            navigation.navigate('Diary', {
+              previous_screen: 'camera',
+              // prediction: result,
+              // image: picture.uri,
+            });
           });
-        });
-        navigation.navigate('Diary', {
-          previous_screen: 'camera',
-          // prediction: result,
-          // image: picture.uri,
-        });
       } catch (err) {
-        console.log('error in cameraScreen');
+        // console.log('error in cameraScreen');
         //handle error for invalid food item here, pop modal
         setModal(true);
       }

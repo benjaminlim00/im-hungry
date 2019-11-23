@@ -5,6 +5,7 @@ INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManif
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
 MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:1:1-30:12
+MERGED from [:react-native-fs] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-uuid-generator] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-uuid-generator/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
 MERGED from [:react-native-image-picker] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
@@ -108,6 +109,8 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:9:5-81
 MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:9:5-81
 MERGED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:9:5-81
+MERGED from [:react-native-fs] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:react-native-fs] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
 	android:name
 		ADDED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml:9:22-78
 application
@@ -192,6 +195,8 @@ uses-sdk
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/benjamin/Desktop/Im-Hungry/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-fs] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-fs] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-uuid-generator] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-uuid-generator/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-uuid-generator] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-uuid-generator/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-camera] /home/benjamin/Desktop/Im-Hungry/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
