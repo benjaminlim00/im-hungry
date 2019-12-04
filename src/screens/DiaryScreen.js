@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import { withNavigationFocus } from 'react-navigation';
 
-import AppBar from '../components/ToolBar';
+import AppBarDiary from '../components/ToolBarDiary';
 import { Spinner } from '../components/Spinner';
 import ModalDetail from '../components/ModalDetail';
 
@@ -52,7 +52,7 @@ const DiaryScreen = ({ navigation }) => {
   if (loading) {
     return (
       <View styles={styles.container}>
-        <AppBar />
+        <AppBarDiary />
         <Spinner />
       </View>
     );
@@ -60,7 +60,7 @@ const DiaryScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <AppBar />
+      <AppBarDiary />
       <View style={{ flex: 1 }}>
         <FlatList
           data={foodRecords}

@@ -11,6 +11,7 @@ import { ListItem } from 'react-native-elements';
 // import { material } from 'react-native-typography';
 import { Appbar } from 'react-native-paper';
 import { withNavigation } from 'react-navigation';
+import { Button } from 'react-native-elements';
 
 import LightFont from './CustomFonts/LightFont';
 import RegularFont from './CustomFonts/RegularFont';
@@ -142,7 +143,7 @@ class ModalDetail extends Component {
           <View style={styles.modalContainer}>
             <Appbar.Header>
               <Appbar.Content
-                title='Delete item'
+                title='Confirm deletion'
                 titleStyle={{
                   fontFamily: 'Montserrat-Regular',
                   alignSelf: 'center',
@@ -153,19 +154,35 @@ class ModalDetail extends Component {
             <View style={styles.card}>
               <Image style={styles.image} source={{ uri: item.image }} />
             </View>
+
+            <Button
+              buttonStyle={styles.deleteButtons}
+              title='Yes'
+              onPress={() => this.confirmDelete(item.id)}
+              type='solid'
+            />
+
+            <Button
+              buttonStyle={styles.deleteButtons}
+              title='No'
+              onPress={this.toggleDeleteModal}
+              type='outline'
+            />
+
+            {/* 
             <TouchableOpacity
               onPress={() => this.confirmDelete(item.id)}
-              style={styles.button}
+              style={styles.deleteButtons}
             >
               <Text style={styles.buttonText}>Yes</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               onPress={this.toggleDeleteModal}
-              style={styles.button}
+              style={styles.deleteButtons}
             >
               <Text style={styles.buttonText}>No</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </Modal>
       </>
@@ -176,8 +193,16 @@ class ModalDetail extends Component {
 export default withNavigation(ModalDetail);
 
 const styles = StyleSheet.create({
+  deleteButtons: {
+    marginTop: 30,
+    alignSelf: 'center',
+    width: '70%',
+    height: 40,
+    borderRadius: 20,
+  },
+
   button: {
-    marginTop: 25,
+    marginTop: 5,
     alignSelf: 'center',
     width: '70%',
     height: 40,
