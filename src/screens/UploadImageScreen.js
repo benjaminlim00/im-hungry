@@ -11,7 +11,7 @@ import AppBar from '../components/ToolBar';
 import { db } from '../config';
 const itemsRef = db.ref('/foodRecords');
 import {
-  _asyncRetrieveNutrition,
+  _retrieveNutrition,
   _retrievePrediction,
   _uploadImageAsync,
 } from '../api';
@@ -19,6 +19,7 @@ import {
 const UploadImageScreen = ({ navigation }) => {
   const [snackbar, setSnackbar] = useState(false);
   const [modal, setModal] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const toggleModal = () => {
     setModal(!modal);
@@ -31,24 +32,33 @@ const UploadImageScreen = ({ navigation }) => {
       const photo = response.uri;
       if (photo) {
         try {
+          setDisabled(true);
           //set snackbar in advance of async calls
           setSnackbar(true);
-          const result = await _retrievePrediction(photo);
-          const nutritionData = await _asyncRetrieveNutrition(result);
 
-          UUIDGenerator.getRandomUUID(uuid => {
-            const url = _uploadImageAsync(photo);
-            itemsRef.push({
-              id: uuid,
-              name: result,
-              image: url,
-              nutritionData,
-            });
+          _retrievePrediction(photo).then(result =>
+            _retrieveNutrition(result).then(nutritionData => {
+              console.log('nutrition data', nutritionData);
+              UUIDGenerator.getRandomUUID(uuid => {
+                const url = _uploadImageAsync(photo);
+                //send image to firebase
+                itemsRef.push({
+                  id: uuid,
+                  name: result,
+                  image: url,
+                  nutritionData,
+                });
+              });
+              //remove disable button
+              setDisabled(false);
 
-            navigation.navigate('Diary', {
-              previous_screen: 'upload screen',
-            });
-          });
+              navigation.navigate('Diary', {
+                previous_screen: 'upload screen',
+                // prediction: result,
+                // image: picture.uri,
+              });
+            }),
+          );
         } catch (err) {
           console.log('error in uploadImageScreen');
           //handle error for invalid food item here, pop modal
@@ -102,10 +112,11 @@ const UploadImageScreen = ({ navigation }) => {
           title='Upload'
           onPress={_handleChoosePhoto}
           type='outline'
+          disabled={disabled}
         />
       </View>
       <Snackbar
-        duration={2000}
+        duration={4000}
         visible={snackbar}
         onDismiss={() => setSnackbar(false)}
       >

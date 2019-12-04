@@ -8,7 +8,7 @@ import DiaryScreen from './src/screens/DiaryScreen';
 import UploadImageScreen from './src/screens/UploadImageScreen';
 import UserScreen from './src/screens/UserScreen';
 
-// console.disableYellowBox = true;
+console.disableYellowBox = true;
 
 const tabNavigator = createMaterialBottomTabNavigator(
   {

@@ -78,11 +78,15 @@ export default class ModalDetail extends Component {
                 marginBottom: 15,
               }}
             >
-              <LightFont>Energy: {Energy} kcal</LightFont>
-              <LightFont>Fat: {Fat} g</LightFont>
-              <LightFont>Protein: {Protein} g</LightFont>
-              <LightFont>Carbs: {Carbs} g</LightFont>
-              <LightFont>Fiber: {Fiber} g</LightFont>
+              {Energy != '0.00' ? (
+                <LightFont>Energy: {Energy} kcal</LightFont>
+              ) : null}
+              {Fat != '0.00' ? <LightFont>Fat: {Fat} g</LightFont> : null}
+              {Protein != '0.00' ? (
+                <LightFont>Protein: {Protein} g</LightFont>
+              ) : null}
+              {Carbs != '0.00' ? <LightFont>Carbs: {Carbs} g</LightFont> : null}
+              {Fiber != '0.00' ? <LightFont>Fiber: {Fiber} g</LightFont> : null}
 
               {/* <Text style={material.body1}>Energy: {Energy} kcal</Text>
               <Text style={material.body1}>Fat: {Fat} g</Text>
