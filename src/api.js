@@ -27,7 +27,7 @@ const _retrievePrediction = picture => {
             let bestPrediction = predictions['prob_labels'][0];
             let capitalizedPred =
               bestPrediction.charAt(0).toUpperCase() + bestPrediction.slice(1);
-            const prediction = capitalizedPred.split('_').join(' ');
+            const prediction = capitalizedPred.split('_').join('');
             console.log('prediction in api.js: ', prediction);
             resolve(prediction);
           }
@@ -53,10 +53,10 @@ const _retrieveNutrition = food => {
 
   let translator = {
     Samgyeopsal: 'korean pork belly',
-    Ojingeo_bokkeum: 'spicy stir fried squid',
+    Ojingeobokkeum: 'spicy stir fried squid',
     Dakbokkeumtang: 'korean spicy chicken',
     Galchijorim: 'korean fish stew',
-    Jeyuk_bokkeum: 'bbq pork',
+    Jeyukbokkeum: 'bbq pork',
     Galbijjim: 'beef short ribs',
     Ramyeon: 'ramen',
   };

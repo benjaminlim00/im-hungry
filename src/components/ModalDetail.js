@@ -10,16 +10,48 @@ import {
 import { ListItem } from 'react-native-elements';
 // import { material } from 'react-native-typography';
 import { Appbar } from 'react-native-paper';
+import { withNavigation } from 'react-navigation';
+
 import LightFont from './CustomFonts/LightFont';
 import RegularFont from './CustomFonts/RegularFont';
 
-export default class ModalDetail extends Component {
+import { db } from '../config';
+const itemsRef = db.ref('/foodRecords');
+
+class ModalDetail extends Component {
   state = {
     isModalVisible: false,
+    isDeleteModalVisible: false,
   };
 
   toggleModal = () => {
     this.setState({ isModalVisible: !this.state.isModalVisible });
+  };
+
+  toggleDeleteModal = () => {
+    this.setState({ isDeleteModalVisible: !this.state.isDeleteModalVisible });
+  };
+
+  confirmDelete = id => {
+    console.log('trying to delete', id);
+
+    itemsRef
+      .orderByChild('id')
+      .equalTo(id)
+      .once('value')
+      .then(function(snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+          //remove each child
+          itemsRef.child(childSnapshot.key).remove();
+        });
+      });
+
+    this.setState({
+      isDeleteModalVisible: !this.state.isDeleteModalVisible,
+    });
+
+    //redirect to deleted page
+    this.props.navigation.navigate('Delete');
   };
 
   render() {
@@ -39,6 +71,7 @@ export default class ModalDetail extends Component {
           topDivider
           chevron
           onPress={this.toggleModal}
+          onLongPress={this.toggleDeleteModal}
         />
         <Modal
           animationType='slide'
@@ -100,13 +133,51 @@ export default class ModalDetail extends Component {
             </TouchableOpacity>
           </View>
         </Modal>
+
+        <Modal
+          animationType='slide'
+          onRequestClose={() => {}}
+          visible={this.state.isDeleteModalVisible}
+        >
+          <View style={styles.modalContainer}>
+            <Appbar.Header>
+              <Appbar.Content
+                title='Delete item'
+                titleStyle={{
+                  fontFamily: 'Montserrat-Regular',
+                  alignSelf: 'center',
+                }}
+              />
+            </Appbar.Header>
+
+            <View style={styles.card}>
+              <Image style={styles.image} source={{ uri: item.image }} />
+            </View>
+            <TouchableOpacity
+              onPress={() => this.confirmDelete(item.id)}
+              style={styles.button}
+            >
+              <Text style={styles.buttonText}>Yes</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={this.toggleDeleteModal}
+              style={styles.button}
+            >
+              <Text style={styles.buttonText}>No</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
       </>
     );
   }
 }
 
+export default withNavigation(ModalDetail);
+
 const styles = StyleSheet.create({
   button: {
+    marginTop: 25,
     alignSelf: 'center',
     width: '70%',
     height: 40,

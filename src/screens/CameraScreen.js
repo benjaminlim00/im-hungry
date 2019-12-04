@@ -101,7 +101,7 @@ const CameraScreen = ({ isFocused, navigation }) => {
           <Icon name='camera' size={30} color='black' />
         </TouchableOpacity>
         <Snackbar
-          duration={4000}
+          duration={6000}
           visible={snackbar}
           onDismiss={() => setSnackbar(false)}
         >

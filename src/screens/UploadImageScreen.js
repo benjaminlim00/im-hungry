@@ -116,7 +116,7 @@ const UploadImageScreen = ({ navigation }) => {
         />
       </View>
       <Snackbar
-        duration={4000}
+        duration={6000}
         visible={snackbar}
         onDismiss={() => setSnackbar(false)}
       >
