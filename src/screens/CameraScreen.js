@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  ImageEditor,
+} from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import { withNavigationFocus } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -34,30 +40,55 @@ const CameraScreen = ({ isFocused, navigation }) => {
 
         //set snackbar in advance of async calls
         setSnackbar(true);
-        this.camera.takePictureAsync(options).then(picRaw =>
-          _retrievePrediction(picRaw.uri).then(result =>
-            _retrieveNutrition(result).then(nutritionData => {
-              console.log('nutrition data', nutritionData);
-              UUIDGenerator.getRandomUUID(uuid => {
-                const url = _uploadImageAsync(picRaw.uri);
-                //send image to firebase
-                itemsRef.push({
-                  id: uuid,
-                  name: result,
-                  image: url,
-                  nutritionData,
-                });
-              });
-              //remove disable button
-              setDisabled(false);
+        this.camera.takePictureAsync(options).then(
+          picRaw =>
+            //crop image
+            Image.getSize(originalImage, (w, h) => {
+              const cropData = {
+                offset: {
+                  x: 0,
+                  y: h / 2 - w / 2,
+                },
+                size: {
+                  width: w,
+                  height: w,
+                },
+              };
+              ImageEditor.cropImage(
+                originalImage,
+                cropData,
+                croppedImage => {
+                  // croppedImage contains your newly cropped image
+                  _retrievePrediction(picRaw.uri).then(result =>
+                    _retrieveNutrition(result).then(nutritionData => {
+                      console.log('nutrition data', nutritionData);
+                      UUIDGenerator.getRandomUUID(uuid => {
+                        const url = _uploadImageAsync(picRaw.uri);
+                        //send image to firebase
+                        itemsRef.push({
+                          id: uuid,
+                          name: result,
+                          image: url,
+                          nutritionData,
+                        });
+                      });
+                      //remove disable button
+                      setDisabled(false);
 
-              navigation.navigate('Diary', {
-                previous_screen: 'camera',
-                // prediction: result,
-                // image: picture.uri,
-              });
+                      navigation.navigate('Diary', {
+                        previous_screen: 'camera',
+                        // prediction: result,
+                        // image: picture.uri,
+                      });
+                    }),
+                  );
+                },
+                error => {
+                  console.log('error with cropping image');
+                },
+              );
             }),
-          ),
+          //crop ends here
         );
       } catch (err) {
         // console.log('error in cameraScreen');
