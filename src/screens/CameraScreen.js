@@ -43,7 +43,7 @@ const CameraScreen = ({ isFocused, navigation }) => {
         this.camera.takePictureAsync(options).then(
           picRaw =>
             //crop image
-            Image.getSize(originalImage, (w, h) => {
+            Image.getSize(picRaw.uri, (w, h) => {
               const cropData = {
                 offset: {
                   x: 0,
@@ -55,15 +55,15 @@ const CameraScreen = ({ isFocused, navigation }) => {
                 },
               };
               ImageEditor.cropImage(
-                originalImage,
+                picRaw.uri,
                 cropData,
                 croppedImage => {
                   // croppedImage contains your newly cropped image
-                  _retrievePrediction(picRaw.uri).then(result =>
+                  _retrievePrediction(croppedImage).then(result =>
                     _retrieveNutrition(result).then(nutritionData => {
                       console.log('nutrition data', nutritionData);
                       UUIDGenerator.getRandomUUID(uuid => {
-                        const url = _uploadImageAsync(picRaw.uri);
+                        const url = _uploadImageAsync(croppedImage);
                         //send image to firebase
                         itemsRef.push({
                           id: uuid,
