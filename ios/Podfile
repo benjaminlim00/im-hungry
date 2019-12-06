@@ -45,6 +45,8 @@ target 'imHungry' do
 
   pod 'RNFS', :path => '../node_modules/react-native-fs'
 
+  pod 'react-native-image-editor', :path => '../node_modules/@react-native-community/image-editor'
+
   target 'imHungryTests' do
     inherit! :search_paths
     # Pods for testing

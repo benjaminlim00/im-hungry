@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import com.imhungry.BuildConfig;
 import com.imhungry.R;
 
+// @react-native-community/image-editor
+import com.reactnativecommunity.imageeditor.ImageEditorPackage;
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
 // react-native-fs
@@ -71,6 +73,7 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new ImageEditorPackage(),
       new RNCameraPackage(),
       new RNFSPackage(),
       new RNGestureHandlerPackage(),
