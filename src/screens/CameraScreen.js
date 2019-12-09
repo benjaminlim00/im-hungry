@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import ImageEditor from '@react-native-community/image-editor';
 
 import { RNCamera } from 'react-native-camera';
@@ -38,25 +38,25 @@ const CameraScreen = ({ isFocused, navigation }) => {
         setSnackbar(true);
         this.camera.takePictureAsync(options).then(
           picRaw => {
-            //crop image
-            const w = 3024;
-            const h = 4032;
-
-            const cropData = {
-              offset: {
-                x: 0,
-                y: h / 2 - w / 2,
-              },
-              size: {
-                width: w,
-                height: w,
-              },
-            };
-
-            ImageEditor.cropImage(
-              picRaw.uri,
-              cropData,
-              croppedImage => {
+            const rawUri = picRaw.uri;
+            Image.getSize(rawUri, (w, h) => {
+              // console.log('w', w);
+              // console.log('h', h);
+              const imageSize = w;
+              const cropData = {
+                offset: {
+                  x: w / 2,
+                  y: h / 2 + imageSize / 6,
+                },
+                size: {
+                  width: imageSize,
+                  height: imageSize,
+                },
+              };
+              //crop image
+              // console.log('before cropping');
+              ImageEditor.cropImage(rawUri, cropData).then(croppedImage => {
+                console.log('cropping image...');
                 // croppedImage contains your newly cropped image
                 _retrievePrediction(croppedImage).then(result =>
                   _retrieveNutrition(result).then(nutritionData => {
@@ -81,11 +81,8 @@ const CameraScreen = ({ isFocused, navigation }) => {
                     });
                   }),
                 );
-              },
-              error => {
-                console.log('error with cropping image');
-              },
-            );
+              });
+            });
           },
           //crop ends here
         );
@@ -121,8 +118,24 @@ const CameraScreen = ({ isFocused, navigation }) => {
               buttonPositive: 'Ok',
               buttonNegative: 'Cancel',
             }}
-          />
+          >
+            <View
+              style={{
+                position: 'absolute',
+                width: 224,
+                height: 224,
+                top: '50%',
+                left: '50%',
+                marginTop: -112,
+                marginLeft: -112,
+                borderColor: 'green',
+                borderWidth: 1,
+                borderStyle: 'dashed',
+              }}
+            />
+          </RNCamera>
         )}
+
         <TouchableOpacity
           style={styles.captureButton}
           onPress={_takePicture}
